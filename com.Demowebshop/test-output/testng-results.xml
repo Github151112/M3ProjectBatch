@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="6" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[==server connected sucessfully==]]>
@@ -14,57 +14,83 @@
       <![CDATA[browser closed successfully]]>
     </line>
     <line>
+      <![CDATA[==Launching chrome Browser==]]>
+    </line>
+    <line>
+      <![CDATA[browser closed successfully]]>
+    </line>
+    <line>
       <![CDATA[==database closed successfully==]]>
     </line>
     <line>
       <![CDATA[==server closed successfully==]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-18T04:53:07Z" name="Default suite" finished-at="2025-03-18T04:53:17Z" duration-ms="9645">
+  <suite started-at="2025-03-18T06:03:05Z" name="Suite" finished-at="2025-03-18T06:03:23Z" duration-ms="17789">
     <groups>
     </groups>
-    <test started-at="2025-03-18T04:53:07Z" name="Default test" finished-at="2025-03-18T04:53:17Z" duration-ms="9645">
-      <class name="com.Demowebshop.testScripts.RegisterTest">
-        <test-method is-config="true" signature="toConnectServer()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@39ac0c0a]" started-at="2025-03-18T04:53:07Z" name="toConnectServer" finished-at="2025-03-18T04:53:07Z" duration-ms="16" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==server connected sucessfully==]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- toConnectServer -->
-        <test-method is-config="true" signature="toConnectDatabase()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@39ac0c0a]" started-at="2025-03-18T04:53:07Z" name="toConnectDatabase" finished-at="2025-03-18T04:53:07Z" duration-ms="1" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==database connected successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- toConnectDatabase -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@39ac0c0a]" started-at="2025-03-18T04:53:07Z" name="setup" finished-at="2025-03-18T04:53:12Z" duration-ms="4893" status="PASS">
+    <test started-at="2025-03-18T06:03:05Z" name="Test" finished-at="2025-03-18T06:03:23Z" duration-ms="17789">
+      <class name="com.Demowebshop.testScripts.ValidLoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Demowebshop.testScripts.ValidLoginTest@6d167f58]" started-at="2025-03-18T06:03:15Z" name="setup" finished-at="2025-03-18T06:03:19Z" duration-ms="3960" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==Launching chrome Browser==]]>
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="register()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@39ac0c0a]" started-at="2025-03-18T04:53:12Z" name="register" finished-at="2025-03-18T04:53:16Z" duration-ms="4360" status="PASS">
+        <test-method signature="login()[pri:0, instance:com.Demowebshop.testScripts.ValidLoginTest@6d167f58]" started-at="2025-03-18T06:03:19Z" name="login" finished-at="2025-03-18T06:03:23Z" duration-ms="3145" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- register -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@39ac0c0a]" started-at="2025-03-18T04:53:16Z" name="tearDown" finished-at="2025-03-18T04:53:17Z" duration-ms="363" status="PASS">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Demowebshop.testScripts.ValidLoginTest@6d167f58]" started-at="2025-03-18T06:03:23Z" name="tearDown" finished-at="2025-03-18T06:03:23Z" duration-ms="323" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[browser closed successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="toCloseDatabase()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@39ac0c0a]" started-at="2025-03-18T04:53:17Z" name="toCloseDatabase" finished-at="2025-03-18T04:53:17Z" duration-ms="0" status="PASS">
+      </class> <!-- com.Demowebshop.testScripts.ValidLoginTest -->
+      <class name="com.Demowebshop.testScripts.RegisterTest">
+        <test-method is-config="true" signature="toConnectServer()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@4ff8d125]" started-at="2025-03-18T06:03:05Z" name="toConnectServer" finished-at="2025-03-18T06:03:05Z" duration-ms="17" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==server connected sucessfully==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- toConnectServer -->
+        <test-method is-config="true" signature="toConnectDatabase()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@4ff8d125]" started-at="2025-03-18T06:03:05Z" name="toConnectDatabase" finished-at="2025-03-18T06:03:05Z" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==database connected successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- toConnectDatabase -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@4ff8d125]" started-at="2025-03-18T06:03:05Z" name="setup" finished-at="2025-03-18T06:03:10Z" duration-ms="5111" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==Launching chrome Browser==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="register()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@4ff8d125]" started-at="2025-03-18T06:03:10Z" name="register" finished-at="2025-03-18T06:03:15Z" duration-ms="4831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@4ff8d125]" started-at="2025-03-18T06:03:15Z" name="tearDown" finished-at="2025-03-18T06:03:15Z" duration-ms="387" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[browser closed successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="toCloseDatabase()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@4ff8d125]" started-at="2025-03-18T06:03:23Z" name="toCloseDatabase" finished-at="2025-03-18T06:03:23Z" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==database closed successfully==]]>
             </line>
           </reporter-output>
         </test-method> <!-- toCloseDatabase -->
-        <test-method is-config="true" signature="toCloseServer()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@39ac0c0a]" started-at="2025-03-18T04:53:17Z" name="toCloseServer" finished-at="2025-03-18T04:53:17Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="toCloseServer()[pri:0, instance:com.Demowebshop.testScripts.RegisterTest@4ff8d125]" started-at="2025-03-18T06:03:23Z" name="toCloseServer" finished-at="2025-03-18T06:03:23Z" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==server closed successfully==]]>
@@ -72,6 +98,6 @@
           </reporter-output>
         </test-method> <!-- toCloseServer -->
       </class> <!-- com.Demowebshop.testScripts.RegisterTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

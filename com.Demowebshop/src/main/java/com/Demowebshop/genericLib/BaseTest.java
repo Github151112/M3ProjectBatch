@@ -29,7 +29,7 @@ public class BaseTest implements IAutoConstant {
 	public void setup() {
 		String browser = f.getDataFromProperty(PROP_PATH, "browser");
 		String url = f.getDataFromProperty(PROP_PATH, "url");
-		Reporter.log("==Launching "+browser+" Browser==",true);
+		Reporter.log("==Launching " + browser + " Browser==", true);
 		driver = d.launchBrowser(browser);
 		d.maximizeBrowser(driver);
 		d.implicitWait(driver, 20);
@@ -40,7 +40,7 @@ public class BaseTest implements IAutoConstant {
 	@AfterClass
 	public void tearDown() {
 		driver.quit();
-		Reporter.log("browser closed successfully",true);
+		Reporter.log("browser closed successfully", true);
 	}
 
 	@AfterTest
