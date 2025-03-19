@@ -16,7 +16,7 @@ import objectRepository.WelcomePage;
 public class InvalidLoginTest extends BaseTest {
 
 	@DataProvider(name = "InvalidData")
-	public Object[][] multipleInvalidData() throws EncryptedDocumentException, IOException {
+	public Object[][] multipleInvalidData() {
 
 		return ExcelUtility.getMultipleData(EXCEL_PATH, INVALIDSHEET);
 	}
