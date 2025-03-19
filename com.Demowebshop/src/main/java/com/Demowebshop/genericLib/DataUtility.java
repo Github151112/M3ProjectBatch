@@ -1,6 +1,7 @@
 package com.Demowebshop.genericLib;
 
 import java.time.Duration;
+import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -45,6 +46,14 @@ public class DataUtility {
 	 */
 	public void launchApplication(WebDriver driver, String url) {
 		driver.get(url);
+	}
+	
+	public String randomEmailId()
+	{
+		Random r  = new Random();
+		int no = r.nextInt(10000);
+		String email = "anoop"+ no+ "@gmail.com";
+		return email;
 	}
 
 }
