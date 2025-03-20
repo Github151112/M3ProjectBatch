@@ -4,9 +4,11 @@ import java.time.Duration;
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
 
 public class DataUtility {
@@ -47,13 +49,17 @@ public class DataUtility {
 	public void launchApplication(WebDriver driver, String url) {
 		driver.get(url);
 	}
-	
-	public String randomEmailId()
-	{
-		Random r  = new Random();
+
+	public String randomEmailId() {
+		Random r = new Random();
 		int no = r.nextInt(10000);
-		String email = "anoop"+ no+ "@gmail.com";
+		String email = "anoop" + no + "@gmail.com";
 		return email;
+	}
+
+	public void moveMouseCursor(WebDriver driver, WebElement element) {
+		Actions a = new Actions(driver);
+		a.moveToElement(element).perform();
 	}
 
 }

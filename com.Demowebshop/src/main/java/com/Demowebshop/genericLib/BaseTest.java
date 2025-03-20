@@ -8,6 +8,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 public class BaseTest implements IAutoConstant {
 
@@ -25,16 +27,16 @@ public class BaseTest implements IAutoConstant {
 		Reporter.log("==database connected successfully", true);
 	}
 
+	@Parameters("browser")
 	@BeforeClass
-	public void setup() {
-		String browser = f.getDataFromProperty(PROP_PATH, "browser");
+	public void setup(@Optional("chrome") String browser) {
+		// String browser = f.getDataFromProperty(PROP_PATH, "browser");
 		String url = f.getDataFromProperty(PROP_PATH, "url");
 		Reporter.log("==Launching " + browser + " Browser==", true);
 		driver = d.launchBrowser(browser);
 		d.maximizeBrowser(driver);
 		d.implicitWait(driver, 20);
 		d.launchApplication(driver, url);
-
 	}
 
 	@AfterClass

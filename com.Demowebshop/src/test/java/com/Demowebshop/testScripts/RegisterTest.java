@@ -13,25 +13,22 @@ import objectRepository.RegisterPage;
 import objectRepository.WelcomePage;
 
 public class RegisterTest extends BaseTest {
-	
+
 	@DataProvider(name = "registerData")
-	public Object[][] registerData() throws EncryptedDocumentException, IOException
-	{
+	public Object[][] registerData() throws EncryptedDocumentException, IOException {
 		return ExcelUtility.getMultipleData(EXCEL_PATH, REGSHEET);
 	}
-	
 
-	@Test(dataProvider ="registerData" )
-	public void register(String firstName,String lastName,String password) throws InterruptedException {
-		
-		
-		//click on register link
+	@Test(dataProvider = "registerData")
+	public void register(String firstName, String lastName, String password) throws InterruptedException {
+
+		// click on register link
 		WelcomePage wp = new WelcomePage(driver);
 		wp.getRegisterLink().click();
-		
-		//perform register
+
+		// perform register
 		RegisterPage rp = new RegisterPage(driver);
-		rp.toRegisterInDemoWebShop(firstName,lastName,d.randomEmailId(),password);
+		rp.toRegisterInDemoWebShop(firstName, lastName, d.randomEmailId(), password);
 		Thread.sleep(3000);
 
 	}
