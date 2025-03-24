@@ -10,36 +10,42 @@ public class RegisterPage extends BaseClass {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@FindBy(id = "gender-male")
 	private WebElement maleRadioButton;
-	
+
 	@FindBy(id = "gender-female")
 	private WebElement femaleRadionButton;
-	
+
 	@FindBy(id = "FirstName")
 	private WebElement firstNameTextField;
-	
+
 	@FindBy(id = "LastName")
 	private WebElement lastNameTextField;
-	
+
 	@FindBy(id = "Email")
 	private WebElement emailTextField;
-	
+
 	@FindBy(id = "Password")
 	private WebElement passwordTextField;
-	
+
 	@FindBy(id = "ConfirmPassword")
 	private WebElement confirmPasswordTextField;
-	
+
 	@FindBy(id = "register-button")
 	private WebElement registerButton;
-	
+
+	@FindBy(xpath = "//input[@value='Continue']")
+	private WebElement continueButton;
+
+	public WebElement getContinueButton() {
+		return continueButton;
+	}
+
 	/*
 	 * this method will perform registration in demowebshop
 	 */
-	public void toRegisterInDemoWebShop(String firstName,String lastName,String email,String password)
-	{
+	public void toRegisterInDemoWebShop(String firstName, String lastName, String email, String password) {
 		maleRadioButton.click();
 		firstNameTextField.sendKeys(firstName);
 		lastNameTextField.sendKeys(lastName);
@@ -48,7 +54,5 @@ public class RegisterPage extends BaseClass {
 		confirmPasswordTextField.sendKeys(password);
 		registerButton.click();
 	}
-	
-	
 
 }

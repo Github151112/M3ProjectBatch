@@ -15,20 +15,20 @@ public class BaseTest implements IAutoConstant {
 
 	public DataUtility d = new DataUtility();
 	public FileUtility f = new FileUtility();
-	public WebDriver driver;
+	public static WebDriver driver;
 
-	@BeforeSuite
+	@BeforeSuite(alwaysRun = true)
 	public void toConnectServer() {
 		Reporter.log("==server connected sucessfully==", true);
 	}
 
-	@BeforeTest
+	@BeforeTest(alwaysRun = true)
 	public void toConnectDatabase() {
 		Reporter.log("==database connected successfully", true);
 	}
 
 	@Parameters("browser")
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup(@Optional("chrome") String browser) {
 		// String browser = f.getDataFromProperty(PROP_PATH, "browser");
 		String url = f.getDataFromProperty(PROP_PATH, "url");
@@ -39,18 +39,18 @@ public class BaseTest implements IAutoConstant {
 		d.launchApplication(driver, url);
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		driver.quit();
 		Reporter.log("browser closed successfully", true);
 	}
 
-	@AfterTest
+	@AfterTest(alwaysRun = true)
 	public void toCloseDatabase() {
 		Reporter.log("==database closed successfully==", true);
 	}
 
-	@AfterSuite
+	@AfterSuite(alwaysRun = true)
 	public void toCloseServer() {
 		Reporter.log("==server closed successfully==", true);
 	}

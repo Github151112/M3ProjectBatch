@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Test1(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="RT"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.Demowebshop.testScripts.InvalidLoginTest">
+      <class name="com.Demowebshop.testScripts.ValidLoginTest">
         <methods>
           <include name="toCloseServer"/>
-          <include name="invalidTest"/>
+          <include name="login"/>
           <include name="toConnectDatabase"/>
           <include name="toCloseDatabase"/>
           <include name="toConnectServer"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.Demowebshop.testScripts.InvalidLoginTest -->
+      </class> <!-- com.Demowebshop.testScripts.ValidLoginTest -->
     </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

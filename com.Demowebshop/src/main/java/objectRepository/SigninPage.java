@@ -19,6 +19,20 @@ public class SigninPage extends BaseClass {
 
 	@FindBy(xpath = "//input[@value='Log in']")
 	private WebElement loginButton;
+	
+	@FindBy(className ="ico-logout")
+	private WebElement logoutLink;
+	
+
+	public WebElement getLogoutLink() {
+		return logoutLink;
+	}
+
+
+	public void setLogoutLink(WebElement logoutLink) {
+		this.logoutLink = logoutLink;
+	}
+
 
 	/*
 	 * this method will perform login operation
